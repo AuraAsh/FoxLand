@@ -866,7 +866,7 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 57
       m_TileSpriteIndex: 62
-      m_TileMatrixIndex: 2
+      m_TileMatrixIndex: 20
       m_TileColorIndex: 15
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
@@ -1304,7 +1304,7 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 5
+  - m_RefCount: 4
     m_Data:
       e00: 6.35
       e01: 0
@@ -1612,12 +1612,12 @@ Tilemap:
       e33: 1
   - m_RefCount: 1
     m_Data:
-      e00: 4.62
+      e00: 4.56
       e01: 0
       e02: 0
-      e03: 0.24
+      e03: 0.27
       e10: 0
-      e11: 3.54
+      e11: 4.2
       e12: 0
       e13: -0.27
       e20: 0
@@ -1628,24 +1628,24 @@ Tilemap:
       e31: 0
       e32: 0
       e33: 1
-  - m_RefCount: 0
+  - m_RefCount: 1
     m_Data:
-      e00: NaN
-      e01: 844544
-      e02: 844544
-      e03: NaN
-      e10: NaN
-      e11: 7.12e-43
-      e12: 7.12e-43
-      e13: NaN
-      e20: 14326235
-      e21: 39914.312
-      e22: -6.1583447e-12
-      e23: 42229
-      e30: 4.5904e-41
-      e31: 7.12e-43
-      e32: 4.5915e-41
-      e33: 7.12e-43
+      e00: 6.41
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 6.37
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_TileColorArray:
   - m_RefCount: 0
     m_Data: {r: 0.00008472428, g: 0.00008472428, b: 0.00008472428, a: 0.00008472428}
