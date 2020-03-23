@@ -70,7 +70,11 @@
     <Compile Include="Assets\Asset Secondary\Samples\2D SpriteShape\3.0.9\Sprite Shape Extras\Scripts\SimpleDraw.cs" />
     <Compile Include="Assets\Asset Secondary\Samples\2D SpriteShape\3.0.9\Sprite Shape Extras\Scripts\Sprinkler.cs" />
     <Compile Include="Assets\Sidescroller2D\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Sidescroller2D\Scripts\Eagle.cs" />
+    <Compile Include="Assets\Sidescroller2D\Scripts\Enemy.cs" />
     <Compile Include="Assets\Sidescroller2D\Scripts\Frog.cs" />
+    <Compile Include="Assets\Sidescroller2D\Scripts\Gator.cs" />
+    <Compile Include="Assets\Sidescroller2D\Scripts\Opossum.cs" />
     <Compile Include="Assets\Sidescroller2D\Scripts\PlayerController.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -327,6 +331,9 @@
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>C:/Users/Aura/Documents/GitHub/Sidescroller/Sidescroller 2D/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -682,6 +689,20 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{13726CA2-870C-4946-3783-07F9D949AE3A}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{28D47BAF-92F4-ACC1-74B0-A69A963E5018}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{EC18D094-9E20-2F44-ECD9-23BA1CA1BD3C}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
