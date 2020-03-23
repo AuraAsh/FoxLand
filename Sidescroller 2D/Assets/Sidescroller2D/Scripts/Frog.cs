@@ -5,7 +5,6 @@ using UnityEngine;
 public class Frog : Enemy
 {
     private Collider2D coll;
-    private Rigidbody2D rb;
 
     [SerializeField]private float leftCap;
     [SerializeField]private float rightCap;
@@ -17,7 +16,6 @@ public class Frog : Enemy
     {
         base.Start();
         coll = GetComponent<Collider2D>();
-        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()

@@ -98,6 +98,9 @@
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Aura/Documents/GitHub/Sidescroller/Sidescroller 2D/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>C:/Users/Aura/Documents/GitHub/Sidescroller/Sidescroller 2D/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/Aura/Documents/GitHub/Sidescroller/Sidescroller 2D/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
@@ -139,6 +142,9 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>C:/Users/Aura/Documents/GitHub/Sidescroller/Sidescroller 2D/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>C:/Users/Aura/Documents/GitHub/Sidescroller/Sidescroller 2D/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>C:/Users/Aura/Documents/GitHub/Sidescroller/Sidescroller 2D/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
@@ -331,9 +337,6 @@
     </Reference>
     <Reference Include="UnityEngine.XRModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
-    </Reference>
-    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>C:/Users/Aura/Documents/GitHub/Sidescroller/Sidescroller 2D/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -689,20 +692,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="AstarPathfindingProject.csproj">
-      <Project>{13726CA2-870C-4946-3783-07F9D949AE3A}</Project>
-      <Name>AstarPathfindingProject</Name>
-    </ProjectReference>
-    <ProjectReference Include="PackageToolsEditor.csproj">
-      <Project>{28D47BAF-92F4-ACC1-74B0-A69A963E5018}</Project>
-      <Name>PackageToolsEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
-      <Project>{EC18D094-9E20-2F44-ECD9-23BA1CA1BD3C}</Project>
-      <Name>AstarPathfindingProjectEditor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

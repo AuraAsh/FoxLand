@@ -181,8 +181,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   state: 0
-  speed: 8
-  jumpforce: 32
-  hurtforce: 10
+  speed: 5
+  jumpforce: 28
+  hurtforce: 5
   Score: 0
   scoreText: {fileID: 0}
