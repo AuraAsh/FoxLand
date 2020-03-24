@@ -43,11 +43,4 @@ public class Gator : Enemy
         nexPosition = nexPosition != positionA ? positionA : positionB;
 
     }
-    //private void OnCollisionEnter2D(Collision2D target)
-    //{
-    //    if (target.collider.name == "Turn" || target.collider.CompareTag("Turn"))
-    //    {
-    //        moveDown = !moveDown;
-    //    }
-    //}
 }
