@@ -69,7 +69,6 @@
     <Compile Include="Assets\Asset Secondary\Samples\2D SpriteShape\3.0.9\Sprite Shape Extras\Scripts\LegacyCollider.cs" />
     <Compile Include="Assets\Asset Secondary\Samples\2D SpriteShape\3.0.9\Sprite Shape Extras\Scripts\SimpleDraw.cs" />
     <Compile Include="Assets\Asset Secondary\Samples\2D SpriteShape\3.0.9\Sprite Shape Extras\Scripts\Sprinkler.cs" />
-    <Compile Include="Assets\SceneChange.cs" />
     <Compile Include="Assets\Sidescroller2D\Scripts\CameraController.cs" />
     <Compile Include="Assets\Sidescroller2D\Scripts\Eagle.cs" />
     <Compile Include="Assets\Sidescroller2D\Scripts\Enemy.cs" />
@@ -77,6 +76,7 @@
     <Compile Include="Assets\Sidescroller2D\Scripts\Gator.cs" />
     <Compile Include="Assets\Sidescroller2D\Scripts\Opossum.cs" />
     <Compile Include="Assets\Sidescroller2D\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Sidescroller2D\Scripts\SceneChange.cs" />
     <Compile Include="Assets\Zero Rare\Retro Sound Effects\Demo\Demo.cs" />
     <None Include="Assets\Asset Secondary\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Asset Secondary\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

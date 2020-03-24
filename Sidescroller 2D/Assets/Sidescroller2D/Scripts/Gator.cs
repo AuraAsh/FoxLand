@@ -4,28 +4,50 @@ using UnityEngine;
 
 public class Gator : Enemy
 {
-    [SerializeField] float speed = 11f;
-    public bool moveDown;
+    [SerializeField] float speed;
+
+    private Vector3 positionA;
+    private Vector3 positionB;
+    private Vector3 nexPosition;
+
+    private Transform objectTransform;
+    [SerializeField] private Transform transformArrival;
+
+    private void Awake()
+    {
+        objectTransform = this.transform;
+    }
+    private void Start()
+    {
+        positionA = objectTransform.localPosition;
+        positionB = transformArrival.localPosition;
+        nexPosition = positionB;
+    }
     private void Update()
     {
-        if (moveDown)
-        {
-            Vector3 temp = transform.position;
-            temp.y -= speed * Time.deltaTime;
-            transform.position = temp;
-        }
-        else
-        {
-            Vector3 temp = transform.position;
-            temp.y += speed * Time.deltaTime;
-            transform.position = temp;
-        }
+        MovementGator();
     }
-    private void OnCollisionEnter2D(Collision2D target)
+    private void MovementGator()
     {
-        if (target.collider.name == "Turn" || target.collider.CompareTag("Turn"))
+        objectTransform.localPosition = Vector3.MoveTowards
+            (objectTransform.localPosition, nexPosition, speed * Time.deltaTime);
+
+        if (Vector3.Distance(objectTransform.localPosition, nexPosition) <= .1)
         {
-            moveDown = !moveDown;
+            ChangeDestination();
         }
     }
+
+    private void ChangeDestination()
+    {
+        nexPosition = nexPosition != positionA ? positionA : positionB;
+
+    }
+    //private void OnCollisionEnter2D(Collision2D target)
+    //{
+    //    if (target.collider.name == "Turn" || target.collider.CompareTag("Turn"))
+    //    {
+    //        moveDown = !moveDown;
+    //    }
+    //}
 }

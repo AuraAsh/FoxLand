@@ -45,12 +45,8 @@ public class PlayerController : MonoBehaviour
             scoreText.text = Score.ToString();
             Score += 1;
             score.Play();
-            Destroy(other.gameObject);
-            Anim.SetBool("Collect", true);
-        }
-        else
-        {
-            Anim.SetBool("Collect", false);
+            other.GetComponent<Animator>().Play("Item");
+            Destroy(other.gameObject,1);   
         }
     }
     public void OnCollisionEnter2D(Collision2D other)
