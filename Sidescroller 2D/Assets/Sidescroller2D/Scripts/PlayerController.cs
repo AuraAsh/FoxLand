@@ -21,6 +21,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Text scoreText;
     [SerializeField] private AudioSource score;
     [SerializeField] private AudioSource footstep;
+    [SerializeField] private AudioSource jump;
+    [SerializeField] private AudioSource hurt;
 
     private void Start()
     {
@@ -43,8 +45,12 @@ public class PlayerController : MonoBehaviour
             scoreText.text = Score.ToString();
             Score += 1;
             score.Play();
-            Anim.SetTrigger("Collect");
             Destroy(other.gameObject);
+            Anim.SetBool("Collect", true);
+        }
+        else
+        {
+            Anim.SetBool("Collect", false);
         }
     }
     public void OnCollisionEnter2D(Collision2D other)
@@ -64,10 +70,12 @@ public class PlayerController : MonoBehaviour
                 if (other.gameObject.transform.position.x > transform.position.x)
                 {
                     rb.velocity = new Vector2(-hurtforce, rb.velocity.y);
+                    hurt.Play();
                 }
                 else
                 {
                     rb.velocity = new Vector2(hurtforce, rb.velocity.y);
+                    hurt.Play();
                 }
             }
         }
@@ -106,6 +114,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && !coll.IsTouchingLayers())
         {
             Jump();
+            jump.Play();
             Anim.SetBool("isJump", true);
         }
         else
@@ -169,10 +178,7 @@ public class PlayerController : MonoBehaviour
         {
             state = State.idle;
         }
-
-
     }
-
     private void Footstep()
     {
         footstep.Play();

@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sidescroller2D/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Sidescroller2D/Scenes/TheEnd.unity
+    guid: d037b77b3689a1c4b86d8019de3c54eb
   m_configObjects: {}
