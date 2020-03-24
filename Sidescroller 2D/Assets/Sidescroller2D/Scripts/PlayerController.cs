@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private Collider2D coll;
     private Rigidbody2D rb;
     private Animator Anim;
+    
    
     //Inspector Variables
     [SerializeField] private State state = State.idle;
@@ -18,7 +19,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float hurtforce = 10f;
     [SerializeField] private int Score = 0;
     [SerializeField] private Text scoreText;
-
+    [SerializeField] private AudioSource score;
+    [SerializeField] private AudioSource footstep;
 
     private void Start()
     {
@@ -34,13 +36,15 @@ public class PlayerController : MonoBehaviour
         }
         VelocityState();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.tag == "Collectable")
+        if (other.gameObject.tag == "Collectable")
         {
             scoreText.text = Score.ToString();
             Score += 1;
-            Destroy(collision.gameObject); 
+            score.Play();
+            Anim.SetTrigger("Collect");
+            Destroy(other.gameObject);
         }
     }
     public void OnCollisionEnter2D(Collision2D other)
@@ -169,6 +173,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void Footstep()
+    {
+        footstep.Play();
+    }
 
 }
   
