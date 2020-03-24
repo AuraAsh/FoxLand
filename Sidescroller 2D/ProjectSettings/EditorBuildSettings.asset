@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Sidescroller2D/Scenes/TheEnd.unity
     guid: d037b77b3689a1c4b86d8019de3c54eb
+  - enabled: 1
+    path: Assets/Sidescroller2D/Scenes/Menu.unity
+    guid: 5fd98a90316184549a0ca61dcbe86210
+  - enabled: 1
+    path: Assets/Sidescroller2D/Scenes/Nature_assets.unity
+    guid: d38f3b6ddd7390f44b717e1122bb426a
   m_configObjects: {}

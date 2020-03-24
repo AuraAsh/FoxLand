@@ -106,7 +106,7 @@ Rigidbody2D:
   m_LinearDrag: 10
   m_AngularDrag: 0.05
   m_GravityScale: 8
-  m_Material: {fileID: 6200000, guid: 2939b793a8e38fb48928db804921a7d0, type: 2}
+  m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
@@ -186,14 +186,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 0
   speed: 5
-  jumpforce: 28
-  hurtforce: 5
+  jumpforce: 30
+  hurtforce: 10
   Score: 0
   scoreText: {fileID: 0}
   score: {fileID: 8993349805108256704}
   footstep: {fileID: 956010857004927057}
   jump: {fileID: 9033020228162200275}
   hurt: {fileID: 3984949949117993847}
+  health: 3
+  healthAmount: {fileID: 0}
 --- !u!82 &956010857004927057
 AudioSource:
   m_ObjectHideFlags: 0
@@ -206,7 +208,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b224ea4077fd9804c825863a283d50a6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.8
+  m_Volume: 0.55
   m_Pitch: 3
   Loop: 0
   Mute: 0

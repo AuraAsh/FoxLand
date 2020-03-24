@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public enum State
 {
     idle, running, jumping, falling, hurt
@@ -23,12 +24,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioSource footstep;
     [SerializeField] private AudioSource jump;
     [SerializeField] private AudioSource hurt;
+    [SerializeField] private int health;
+    [SerializeField] private Text healthAmount;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+        healthAmount.text = health.ToString();
     }
     private void Update()
     {
@@ -63,6 +67,7 @@ public class PlayerController : MonoBehaviour
             else
             {
                 state = State.hurt;
+                HandleHealth();
                 if (other.gameObject.transform.position.x > transform.position.x)
                 {
                     rb.velocity = new Vector2(-hurtforce, rb.velocity.y);
@@ -74,6 +79,16 @@ public class PlayerController : MonoBehaviour
                     hurt.Play();
                 }
             }
+        }
+    }
+
+    private void HandleHealth()
+    {
+        health -= 1;
+        healthAmount.text = health.ToString();
+        if (health <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
