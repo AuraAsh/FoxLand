@@ -52,6 +52,11 @@ public class PlayerController : MonoBehaviour
             other.GetComponent<Animator>().Play("Item");
             Destroy(other.gameObject,1);   
         }
+        if (other.gameObject.tag == "Enemy")
+        {
+            other.GetComponent<Animator>().Play("Death");
+            Destroy(other.gameObject, 1);
+        }
     }
     public void OnCollisionEnter2D(Collision2D other)
     {
@@ -194,6 +199,5 @@ public class PlayerController : MonoBehaviour
     {
         footstep.Play();
     }
-
 }
   

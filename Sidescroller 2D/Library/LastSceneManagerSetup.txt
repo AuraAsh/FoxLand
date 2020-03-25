@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Sidescroller2D/Scenes/TheEnd.unity
+- path: Assets/Sidescroller2D/Scenes/Nature_assets.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
