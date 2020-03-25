@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
         if(state != State.hurt)
         {
             Movement();
+
         }
         VelocityState();
     }
@@ -51,11 +52,6 @@ public class PlayerController : MonoBehaviour
             score.Play();
             other.GetComponent<Animator>().Play("Item");
             Destroy(other.gameObject,1);   
-        }
-        if (other.gameObject.tag == "Enemy")
-        {
-            other.GetComponent<Animator>().Play("Death");
-            Destroy(other.gameObject, 1);
         }
     }
     public void OnCollisionEnter2D(Collision2D other)

@@ -3497,11 +3497,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Opossum
       objectReference: {fileID: 0}
-    - target: {fileID: 6649137530940786676, guid: c4417f96236d2714196c8b9e9bc92667,
-        type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4417f96236d2714196c8b9e9bc92667, type: 3}
 --- !u!4 &8208496820396760845 stripped

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gator : Enemy
+public class Gator : MonoBehaviour
 {
     [SerializeField] float speed;
 

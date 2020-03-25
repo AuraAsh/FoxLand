@@ -15,11 +15,11 @@ public class Enemy : MonoBehaviour
     }
     public void JumpedOn()
     {
+        rb.velocity = Vector2.zero;
         Anim.SetTrigger("Death");
         death.Play();
-        rb.velocity = Vector2.zero;
+        GetComponent<Collider2D>().enabled = false;
         rb.bodyType = RigidbodyType2D.Kinematic;
-        GetComponent<Collider2D>().enabled = false;  
     }
     private void Death()
     {
